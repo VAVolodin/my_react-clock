@@ -1,0 +1,82 @@
+.creature {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #3ac;
+    position: relative;
+}
+
+.creature::before,
+.creature::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    border-radius: 50%;
+    background: #000;
+    top: 40px;
+    animation: eye 14s ease-in-out infinite;
+}
+
+.creature::before {
+    left: 55px;
+}
+
+.creature::after {
+    right: 55px;
+}
+
+.creature span {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 30px;
+    left: 70px;
+    animation: mouth 14s infinite;
+}
+
+@keyframes eye {
+    0% {
+        transform: none;
+    }
+
+    50% {
+        transform: scaleY(0.2);
+    }
+
+    100% {
+        transform: none;
+    }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+    .creature {
+        animation: spin infinite 14s linear;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes mouth {
+    0% {
+        border-bottom: 3px solid red;
+    }
+
+    50% {
+        border-bottom: 53px solid red;
+    }
+
+    100% {
+        border-bottom: 3px solid red;
+    }
+}
