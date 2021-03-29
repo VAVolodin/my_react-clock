@@ -22,7 +22,7 @@ class Clock2 extends React.Component {
         return(
             <>
             <p>
-                Fucking funny time:<br />
+                It's funny time:<br />
                 &lt; {this.state.date.toLocaleTimeString()} &gt;
             </p>
             </>
